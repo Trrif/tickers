@@ -15,7 +15,7 @@ class Ticker extends Component {
       currPrice,
       prevPrice,
       refreshTicker,
-      removeCurrency
+      removeStock
     } = this.props;
 
     return (
@@ -34,7 +34,7 @@ class Ticker extends Component {
         <RefreshButton onClick={() => refreshTicker(tickerName)}>
           Refresh
         </RefreshButton>
-        <RemoveButton onClick={() => removeCurrency(tickerName)} />
+        <RemoveButton onClick={() => removeStock(tickerName)} />
       </Layout>
     );
   }

@@ -4,8 +4,8 @@ import { connect } from "react-redux";
 import {
   refreshAllTickers,
   refreshTicker,
-  addCurrency,
-  removeCurrency,
+  addStock,
+  removeStock,
   setRefreshInterval
 } from "./store/actions";
 
@@ -37,8 +37,8 @@ export default connect(
   {
     refreshAllTickers,
     refreshTicker,
-    addCurrency,
-    removeCurrency,
+    addStock,
+    removeStock,
     setRefreshInterval
   }
 )(App);

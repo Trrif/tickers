@@ -6,12 +6,12 @@ import Controls from "../Controls";
 
 class Layout extends Component {
   render() {
-    const { tickers, refreshTicker, addCurrency, removeCurrency } = this.props;
+    const { tickers, refreshTicker, addStock, removeStock } = this.props;
     const { rates, symbols, intervalTimeout } = tickers;
 
     return (
       <LayoutMain>
-        <Controls addCurrency={addCurrency} />
+        <Controls addStock={addStock} />
         <LayoutTickers>
           {symbols.map(symbol => {
             const rate = rates[symbol];
@@ -23,7 +23,7 @@ class Layout extends Component {
                 prevPrice={rate.prevPrice}
                 currPrice={rate.currPrice}
                 refreshTicker={refreshTicker}
-                removeCurrency={removeCurrency}
+                removeStock={removeStock}
               />
             );
           })}

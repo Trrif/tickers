@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const ADD_CURRENCY = "ADD_CURRENCY";
-const REMOVE_CURRENCY = "REMOVE_CURRENCY";
+const ADD_STOCK = "ADD_STOCK";
+const REMOVE_STOCK = "REMOVE_STOCK";
 const REFRESH_ALL_TICKERS = "REFRESH_ALL_TICKERS";
 const REFRESH_TICKER = "REFRESH_TICKER";
 const SET_REFRESH_INTERVAL = "SET_REFRESH_INTERVAL";
@@ -47,7 +47,7 @@ const refreshTicker = symbol => dispatch => {
     });
 };
 
-const addCurrency = symbol => dispatch => {
+const addStock = symbol => dispatch => {
   axios({
     url: `${apiUrl}/stock/${symbol}/price`,
     method: "get"
@@ -55,7 +55,7 @@ const addCurrency = symbol => dispatch => {
     .then(response => {
       const { data } = response;
 
-      dispatch({ type: ADD_CURRENCY, payload: { symbol, price: data } });
+      dispatch({ type: ADD_STOCK, payload: { symbol, price: data } });
     })
     .catch(error => {
       if (error.response.status === 404) {
@@ -66,7 +66,7 @@ const addCurrency = symbol => dispatch => {
     });
 };
 
-const removeCurrency = symbol => ({ type: REMOVE_CURRENCY, payload: symbol });
+const removeStock = symbol => ({ type: REMOVE_STOCK, payload: symbol });
 
 const setRefreshInterval = intervalTimeout => (dispatch, getState) => {
   const { refreshIntervalId } = getState();
@@ -87,7 +87,7 @@ const setRefreshInterval = intervalTimeout => (dispatch, getState) => {
 export {
   refreshAllTickers,
   refreshTicker,
-  addCurrency,
-  removeCurrency,
+  addStock,
+  removeStock,
   setRefreshInterval
 };

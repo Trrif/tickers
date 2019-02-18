@@ -12,7 +12,7 @@ const initialState = restoreStore() || {
 
 function tickers(state = initialState, action) {
   switch (action.type) {
-    case "ADD_CURRENCY": {
+    case "ADD_STOCK": {
       const { symbol, price } = action.payload;
       const { rates, symbols } = state;
 
@@ -30,7 +30,7 @@ function tickers(state = initialState, action) {
         : state;
     }
 
-    case "REMOVE_CURRENCY": {
+    case "REMOVE_STOCK": {
       const { payload } = action;
       const { rates, symbols } = state;
 

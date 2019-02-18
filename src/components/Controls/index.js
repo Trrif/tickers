@@ -15,14 +15,14 @@ class Controls extends Component {
 
   render() {
     const { inputSymbol, state } = this;
-    const { addCurrency } = this.props;
+    const { addStock } = this.props;
 
     return (
       <Layout>
         <InputControl onChange={inputSymbol} value={state.symbol} />
         <Button
           onClick={() => {
-            addCurrency(state.symbol);
+            addStock(state.symbol);
             this.setState({ symbol: "" });
           }}
         >

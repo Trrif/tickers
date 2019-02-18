@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "5ed6ade8ef3ca884b104",
+    "revision": "358b54c1c0848a428e5e",
     "url": "/tickers/static/css/main.3de34311.chunk.css"
   },
   {
-    "revision": "5ed6ade8ef3ca884b104",
-    "url": "/tickers/static/js/main.5ed6ade8.chunk.js"
+    "revision": "358b54c1c0848a428e5e",
+    "url": "/tickers/static/js/main.358b54c1.chunk.js"
   },
   {
     "revision": "f863f92d6e84621d407c",
@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/tickers/static/js/2.b530f53c.chunk.js"
   },
   {
-    "revision": "b92087b76f807c59298ff550f3e15dfa",
+    "revision": "46054843a0248021df0ad5a642845658",
     "url": "/tickers/index.html"
   }
 ];

@@ -2,7 +2,7 @@
 
 const saveStore = store => {
   try {
-    console.log(store)
+    console.log(store);
     localStorage.store = JSON.stringify(store);
   } catch {
     console.log("The browser doesn't support save function.");

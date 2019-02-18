@@ -10,14 +10,14 @@ import {
 } from "./store/actions";
 
 import Layout from "./components/Layout";
-import {saveStore} from "./utils/storeSaving";
+import { saveStore } from "./utils/storeSaving";
 
 class App extends Component {
   componentWillUpdate(nextProps) {
-      saveStore(nextProps.tickers)
+    saveStore(nextProps.tickers);
   }
 
-componentDidMount() {
+  componentDidMount() {
     this.props.setRefreshInterval(2500);
   }
 
